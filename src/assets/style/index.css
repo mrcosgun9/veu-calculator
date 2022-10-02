@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+  @apply w-full h-screen bg-gray-50 overflow-hidden flex justify-center align-middle items-center;
+}
+.blob-box{
+  @apply w-96 h-96  absolute top-0 right-0 rounded-full z-0;
+  background: url("@/assets/images/blob.svg");
+  background-size: contain;
+  content: "";
+  transform-origin:50% 50% ;
+  animation: move 10s ease-in-out infinite;
+
+}
+
+
+@keyframes move {
+  0%   { transform: scale(1) translate(0px,0px);}
+  38%   { transform: scale(1,2) translate(40%,60%) rotate(160deg);}
+  40%   { transform: scale(1.2) translate(40%,60%) rotate(160deg);}
+  78%   { transform: scale(1.5) translate(-50vw,60vh) rotate(-20deg);}
+  80%   { transform: scale(1.5) translate(-50vw,60vh) rotate(-20deg);}
+  100%   { transform: scale(1) translate(0px,0px);}
+
+} 
